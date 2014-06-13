@@ -1,4 +1,4 @@
-=== Jigoshop Credimax Payment Gateway ===
+=== Jigoshop Credimax ===
 Contributors: aliashoor
 Tags: jigoshop, cart, checkout, ecommerce, shop, payment, gateway
 Requires at least: 3.2

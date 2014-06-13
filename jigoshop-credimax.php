@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Jigoshop CrediMax Payment Gateway
+Plugin Name: Jigoshop CrediMax
 Plugin URI: 
 Description: This plugin extends the Jigoshop payment gateways to add in Credimax Payment Gateway.
 Version: 1.0.0
@@ -52,8 +52,8 @@ function jigoshop_credimax_payment_gateway() {
 		    	$this->icon 			= apply_filters( 'jigoshop_credimax_icon', JIGOSHOP_CREDIMAX_URL . 'images/icon.png' );
 		    	$this->has_fields 		= false;
 
-				self::$request_url  	= $options->get_option('jigoshop_credimax_gateway_mode') == 'no' ? self::CREDIMAX_LIVE_URL : self::CREDIMAX_SANDBOX_URL;
-				self::$status 			= $options->get_option('jigoshop_credimax_gateway_mode') == 'no' ? '0' : '1';
+				self::$request_url  	= $options->get_option( 'jigoshop_credimax_gateway_mode' ) == 'no' ? self::CREDIMAX_LIVE_URL : self::CREDIMAX_SANDBOX_URL;
+				self::$status 			= $options->get_option( 'jigoshop_credimax_gateway_mode' ) == 'no' ? 0 : 1;
 				$this->enabled			= $options->get_option( 'jigoshop_credimax_gateway_enabled' );
 				$this->title 			= $options->get_option( 'jigoshop_credimax_gateway_title' );
 				$this->description 		= $options->get_option( 'jigoshop_credimax_gateway_description' );
@@ -61,7 +61,7 @@ function jigoshop_credimax_payment_gateway() {
 				$this->access_code		= $options->get_option( 'jigoshop_credimax_gateway_access_code' );
 				$this->secure_secret	= $options->get_option( 'jigoshop_credimax_gateway_secure_secret' );
 
-				add_option( 'jigoshop_credimax_gateway_enabled', 'yes' );
+				add_option( 'jigoshop_credimax_gateway_enabled', 'no' );
 				add_option( 'jigoshop_credimax_gateway_title', 'CrediMax' );
 				add_option( 'jigoshop_credimax_gateway_description', 'Pay with CrediMax; Pay with your credit card through CrediMax payment gateway.' );
 
@@ -89,7 +89,7 @@ function jigoshop_credimax_payment_gateway() {
 					'desc' 		=> '',
 					'tip' 		=> '',
 					'id' 		=> 'jigoshop_credimax_gateway_enabled',
-					'std' 		=> 'yes',
+					'std' 		=> 'no',
 					'type' 		=> 'checkbox',
 					'choices'	=> array(
 						'no'			=> __('No', 'jigoshop'),
@@ -238,7 +238,7 @@ function jigoshop_credimax_payment_gateway() {
 				// $_POST["vpc_OrderInfo"] = implode(', ', $data['description']);
 				// file_lm(self::$status);
 
-				if(self::$status == '0'){
+				if(self::$status == 0){
 					$_POST["vpc_Amount"] 			= $data['price'];
 				} else {
 					$_POST["vpc_Amount"] 			= 0.01;
