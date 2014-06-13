@@ -236,7 +236,7 @@ function jigoshop_credimax_payment_gateway() {
 
 				// Post data
 				// $_POST["vpc_OrderInfo"] = implode(', ', $data['description']);
-				file_lm(self::$status);
+				// file_lm(self::$status);
 
 				if(self::$status == '0'){
 					$_POST["vpc_Amount"] 			= $data['price'];
