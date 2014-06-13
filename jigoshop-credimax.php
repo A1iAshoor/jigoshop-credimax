@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Jigoshop CrediMax
-Plugin URI: 
+Plugin URI: http://wordpress.org/plugins/jigoshop-credimax/
 Description: This plugin extends the Jigoshop payment gateways to add in Credimax Payment Gateway.
 Version: 1.0.0
 Author: Ali Ashoor

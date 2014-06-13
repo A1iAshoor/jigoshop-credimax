@@ -1,5 +1,5 @@
 === Jigoshop Credimax ===
-Contributors: aliashoor
+Contributors: Ali Ashoor
 Tags: jigoshop, cart, checkout, ecommerce, shop, payment, gateway
 Requires at least: 3.2
 Tested up to: 3.9.1
@@ -10,7 +10,7 @@ This plugin extends the Jigoshop payment gateways to add in Credimax Payment Gat
 
 This plugin extends the Jigoshop payment gateways to add in Credimax Payment Gateway.
 
-It's created by <a href="http://github.com/AliAshoor" title="Ali Ashoor">Ali Ashoor</a>.
+It's created by <a href="http://github.com/A1iAshoor" title="Ali Ashoor">Ali Ashoor</a>.
 
 == Installation ==
 
